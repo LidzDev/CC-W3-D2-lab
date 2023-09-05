@@ -1,8 +1,13 @@
 <html>
     <head>
-        <title>My very first jinja</title>
+        <title>{{ title }}</title>
     </head>
     <body>
-        <h1>is this going to work?</h1>
+        <h1>{{ title }}</h1>
+        <ul>
+        {% for order in orders %}
+        <li>{{ order.customer_name}} ordered: {{ order.order_quantity }} {{order.book_title}} by {{ order.book_author }}, quality: {{ order.item_description }}</li>
+        {% endfor %}
+        </ul>
     </body>
 </html>
