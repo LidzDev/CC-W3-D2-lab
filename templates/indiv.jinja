@@ -3,6 +3,14 @@
         <title>Individual Order Statement</title>
     </head>
     <body>
-        <h1>{{ title }} {{ order_number }}</h1>
+        <h1>{{ title }} {{ order.order_number }} {{order.book_title}} </h1>
+        <ul>
+            <li>Ordered by: {{ order.customer_name}}</li>
+            <li>Author: {{ order.book_author}}</li>
+            <li>Order date: {{ order.order_date}}</li>
+            <li>Order quantity: {{ order.order_quantity}}</li>
+            <li>Item state: {{ order.item_description}} </li>
+
+        </ul>
     </body>
 </html>

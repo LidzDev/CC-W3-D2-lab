@@ -5,9 +5,9 @@
     <body>
         <h1>{{ title }}</h1>
         <ul>
-        {% for order in orders %}
-        <li>{{ order.customer_name}} ordered: {{ order.order_quantity }} {{order.book_title}} by {{ order.book_author }}, quality: {{ order.item_description }}</li>
-        {% endfor %}
+            {% for order in orders %}
+                <li>{{ order.customer_name}} ordered: {{ order.order_quantity }} {{order.book_title}} by {{ order.book_author }}, quality: <a href="/orders/{{order.order_number}}"> {{ order.item_description }}</a></li>
+             {% endfor %}
         </ul>
     </body>
 </html>
