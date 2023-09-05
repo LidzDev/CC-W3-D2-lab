@@ -9,6 +9,6 @@ indiv_order_blueprint = Blueprint("indiv", __name__)
 def index():    
     return render_template('index.jinja', title="Shop Order List", orders = orders)
 
-@indiv_order_blueprint.route("/indiv")
+@indiv_order_blueprint.route("/orders/")
 def indiv():
     return render_template('indiv.jinja')
